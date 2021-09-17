@@ -33,10 +33,35 @@ class BinaryTree {
         if (node.leftNode != null) {
             this.preorderTrevers(node.leftNode);
         }
-        if(node.rightNode != null){
+        if (node.rightNode != null) {
             this.preorderTrevers(node.rightNode);
         }
     }
+
+    //
+    // ──────────────────────────────────────────────────────────────────────────── II ──────────
+    //   :::::: P O S T   O R D E R   T R E V E R S : :  :   :    :     :        :          :
+    // ──────────────────────────────────────────────────────────────────────────────────────
+    // 1.you have to fetch data from Binary Tree in postorder Style(leftNode , rightNode, root)
+
+
+    postOrderTrevers(node) {
+        if (node.leftNode != null) this.postOrderTrevers(node.leftNode);
+        if (node.rightNode != null) this.postOrderTrevers(node.rightNode);
+        console.log(node.data);
+    }
+     //
+     // ──────────────────────────────────────────────────────────────────────── III ──────────
+     //   :::::: I N   O R D E R   T R E V E R S : :  :   :    :     :        :          :
+     // ──────────────────────────────────────────────────────────────────────────────────
+     // 1.you have to fetch data from Binary Tree in postorder Style(leftNode then rootNiode and then rightNode)
+    inOrderTrevers(node){
+        if(node.leftNode != null) this.inOrderTrevers(node.leftNode);
+        console.log(node.data);
+        if(node.rightNode != null) this.inOrderTrevers(node.rightNode);
+
+    }
+
 }
 
 let root = new Node(1);
@@ -52,4 +77,6 @@ let node5 = new Node(5);
 tree.rightNodeAdd(node3, node5);
 console.log(root);
 tree.preorderTrevers(root);
+tree.postOrderTrevers(root);
+tree.inOrderTrevers(root);
 
