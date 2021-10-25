@@ -24,6 +24,7 @@ function merge(arr, left, mid, right) {
    let i = left, j = mid + 1, k = left;
 
    while (i <= mid && j <= right) {
+      //tempArray[k++] ==== tampArray[k] and then incrise the value of k
       if (arr[j] > arr[i]) tempArray[k++] = arr[i++];
       tempArray[k++] = arr[j++];
    }
