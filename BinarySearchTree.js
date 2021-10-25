@@ -111,6 +111,7 @@ class BinarySearchTree {
     }
 
     searchSmallestNode(node) {
+        //Have to search the rigth side smallest Node.
         let smallestNode = node.rightNode;
         let smallestNodeParent = node;
         while (smallestNode.leftNode != null) {
