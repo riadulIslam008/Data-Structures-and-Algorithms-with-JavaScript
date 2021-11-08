@@ -44,6 +44,7 @@ function merge(arr, left, mid, right) {
    }
 
    //* ==== Space Complexity ==== O(n) , n= main Array length. In merge Function used a new Array and his max is main Array length.
+   //* ==== Time Complexity ===== O(n logn), n = array length, O(n) = merge_sort call time, merge() time = O(log n).
 }
 let array = [10, 8, 4, 1, 7, 3, 9, 5];
 let left = 0;
