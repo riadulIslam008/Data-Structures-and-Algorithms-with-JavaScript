@@ -6,7 +6,7 @@
 // frist swap first and last Heaps node 
 //then remove the last heaps node with array.pop() method
 
-//And Last Most Important thing is we should check the heapsArray. Is it max Heaps? that's why call build_max_heap  
+//And Last Most Important thing is we should check the heapsArray. Is it max Heaps? that's why call max_heapify  
 
 
  function remove_heaps_node(heapsArray) {
@@ -18,25 +18,13 @@
      heapsArray.pop();
      console.log(heapsArray);
 
-    //call -- build_max_heap function from previous page
+    //call -- max_heapify function from previous page
 
-    build_max_heap(heapsArray);
+   max_heapify(heapsArray, heapsArray.length, 0);
  }
-//this section is from Build Max Heap
 
 
-function build_max_heap(array) {
-    let arraySize = array.length;
-    for (var i = Math.floor(arraySize / 2) -1 ; i >= 0; i--) {
-        // When use Math.floor(arraySize /2) -1 , it will point a index 
-        // where is last Parent Node whose have one or two children
-        // it should be checked is it max Heap or not?
-        max_heapify(array, arraySize, i)
-    }
-}
-
-
-
+//this section is from Build Max Heap.js
 function max_heapify(array, heapArraySize, index) {
     let leftChild, rightChild;
 
